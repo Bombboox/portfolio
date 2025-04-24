@@ -301,11 +301,6 @@ class Sprite {
                 gameCompleted = true;
                 // Play victory sound
                 victorySound.play();
-                // Show navigation bar
-                document.querySelector('nav').style.display = 'block';
-                // Make the navigation bar visible when game is completed
-                document.querySelector('nav').style.opacity = '1';
-                document.querySelector('nav').style.visibility = 'visible';
             } else {
                 // Show arrow to indicate next level only if not the last level
                 ARROW.visible = true;
