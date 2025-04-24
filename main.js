@@ -193,7 +193,7 @@ class Sprite {
         this.lastFrameTime = 0;
         this.x = currentLevel.startPosition.x;
         this.y = currentLevel.startPosition.y;
-        this.scale = 2.5; // Scale up the sprite for visibility
+        this.scale = 1.5; // Scale up the sprite for visibility
         
         // Physics properties
         this.velocityX = 0;
