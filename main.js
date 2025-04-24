@@ -222,9 +222,22 @@ class Sprite {
         // Ground collision
         const ground = canvas.height - this.height * this.scale;
         if (this.y > ground) {
-            this.y = ground;
-            this.velocityY = 0;
-            this.isJumping = false;
+            if (!currentLevel.completed) {
+                // Teleport to first platform if level is not completed
+                if (currentLevel.platforms.length > 0) {
+                    const firstPlatform = currentLevel.platforms[0];
+                    this.x = firstPlatform.x + (firstPlatform.width / 2) - (this.width * this.scale / 2);
+                    this.y = firstPlatform.y - this.height * this.scale;
+                    this.velocityY = 0;
+                    this.velocityX = 0;
+                    this.isJumping = false;
+                    this.setState(STATES.IDLE);
+                }
+            } else {
+                this.y = ground;
+                this.velocityY = 0;
+                this.isJumping = false;
+            }
         }
         
         // Wall collision
