@@ -525,6 +525,7 @@ const main = () => {
     
     // Initialize the slime sprite
     slime = new Sprite("sprites/slime.png", SPRITE_WIDTH, SPRITE_HEIGHT);
+    slime.x = 175;
     
     // Track key states
     window.addEventListener("keydown", (e) => {
