@@ -92,6 +92,20 @@ const LEVELS = [
         completed: false
     },
     {
+        name: "proficiency",
+        platforms: [
+            { x: 100, y: 400, width: 120, height: 20 },
+            { x: 270, y: 350, width: 100, height: 20 },
+            { x: 420, y: 300, width: 100, height: 20 },
+            { x: 570, y: 350, width: 100, height: 20 },
+            { x: 720, y: 300, width: 100, height: 20 },
+            { x: 870, y: 250, width: 150, height: 20 }
+        ],
+        lightbulb: { x: 920, y: 220 },
+        startPosition: { x: 50, y: 100 },
+        completed: false
+    },
+    {
         name: "contact",
         platforms: [
             { x: 100, y: 400, width: 100, height: 20 },
